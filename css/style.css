@@ -1,0 +1,105 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common */
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #686a6f;
+    font-weight: 600;
+}
+ul{
+    margin: 10% 0;
+    list-style: none;
+}
+ul li{
+    margin: 15px 0;
+}
+ul li span,
+ul li img{
+    vertical-align: middle;
+}
+h4{
+    color: white;
+}
+.line::after{
+    display: block;
+	content: '';
+	width: 100%;
+	height: 1px;
+	background-color: #686a6f;
+}
+
+/* Main */
+main{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* Navbar Left */
+.nav-left{
+    width: 15%;
+    height: calc(100vh - 100px);
+    padding: 25px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: black;
+}
+.nav-left .logo{
+    height: 40px;
+}
+.nav-icon{
+    height: 25px;
+}
+.nav-header{
+    width: 100%;
+}
+.nav-main{
+    width: 100%;
+}
+.nav-footer{
+    width: 100%;
+}
+.add-playlist{
+    margin: 15px 0;
+}
+.square{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #686a6f;
+    color: black;
+    font-size: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+.nav-profile img,
+.download-app img{
+    height: 18px;
+}
+
+/* Content Container */
+.content-container{
+    width: 85%;
+    background-color: #141922;
+}
+
+
+/* Footer */
+footer{
+    display: fixed;
+    z-index: 10;
+
+    width: 100%;
+    height: 100px;
+    background-color: #282828;
+}
