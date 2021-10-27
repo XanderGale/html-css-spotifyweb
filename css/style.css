@@ -31,7 +31,10 @@ h4{
 	width: 100%;
 	height: 1px;
 	background-color: #686a6f;
+
+    margin: 6px 0;
 }
+
 
 /* Main */
 main{
@@ -65,6 +68,7 @@ main{
 }
 .nav-main{
     width: 100%;
+    flex: 1;
 }
 .nav-footer{
     width: 100%;
@@ -88,9 +92,39 @@ main{
 }
 
 /* Content Container */
-.content-container{
+.container-right{
+    position: relative;
+
+
     width: 85%;
     background-color: #141922;
+}
+
+/* Upgrade Bar */
+.upgrade-bar{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: right;
+    align-items: center;
+}
+.upgrade-button{
+    display: inline-block;
+    padding: 15px 50px;
+    border: 1px solid white;
+    border-radius: 30px;
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 
