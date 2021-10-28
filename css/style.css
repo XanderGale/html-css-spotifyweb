@@ -10,7 +10,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: #686a6f;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
 }
 h1,
 h2,
@@ -137,10 +137,14 @@ main{
     padding: 3%;
 }
 .content-container h2,
-.content-container h3{
+.content-container h3,
+.content-container h5{
     margin: 20px 0;
 }
-.recently-played{
+.content-container h5{
+    color: #686a6f;
+}
+.items-row{
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -148,11 +152,16 @@ main{
 }
 .item{
     max-width: calc(((100% - 2%) - 10%) / 6);
+    min-width: 100px;
     margin: 1%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: flex-start;
     align-items: center;
+}
+.item-title,
+.subtitle{
+    text-align: center;
 }
 .item-img-wrap{
     position: relative;
@@ -253,12 +262,12 @@ footer{
 }
 .now-playing-actions{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
 .now-playing-actions i{
-    margin: 0 25%;
+    margin: 25%;
 }
 .center-player{
     width: 50%;
@@ -269,8 +278,9 @@ footer{
     align-items: center;
 }
 .player-actions{
-    width: 40%;
-    height: calc(100% / 2);
+    width: 60%;
+    max-width: 1200px;
+    height: 60%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -278,9 +288,12 @@ footer{
 
     color: white;
 }
+.player-actions .fa-play-circle{
+    font-size: 30px;
+}
 .down-player{
     width: 100%;
-    height: calc(100% / 2);
+    height: 40%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
