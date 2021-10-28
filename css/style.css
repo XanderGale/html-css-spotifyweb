@@ -10,18 +10,11 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: #686a6f;
     font-weight: 600;
+    font-size: 20px;
 }
-ul{
-    margin: 10% 0;
-    list-style: none;
-}
-ul li{
-    margin: 15px 0;
-}
-ul li span,
-ul li img{
-    vertical-align: middle;
-}
+h1,
+h2,
+h3,
 h4{
     color: white;
 }
@@ -33,6 +26,9 @@ h4{
 	background-color: #686a6f;
 
     margin: 6px 0;
+}
+ul{
+    list-style-type: none;
 }
 
 
@@ -90,14 +86,77 @@ main{
 .download-app img{
     height: 18px;
 }
+.nav.left ul{
+    margin: 10% 0;
+    list-style: none;
+}
+.nav-left ul li{
+    margin: 15px 0;
+}
+.nav-left ul li span,
+.nav-left ul li img{
+    vertical-align: middle;
+}
 
-/* Content Container */
+/*Container Right */
 .container-right{
     position: relative;
 
-
     width: 85%;
+    padding-top: 120px;
     background-color: #141922;
+
+    overflow-y: auto;
+}
+.nav-content{
+    text-align: center;
+}
+.nav-content ul{
+    list-style-type: none;
+}
+.nav-content ul li{
+    display: inline-block;
+
+    margin: 0 10px;
+}
+.nav-content ul li a{
+    color: #686a6f;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+}
+
+/* Content Container */
+.content-container{
+    padding: 20px;
+}
+.content-container h2,
+.content-container h3{
+    margin: 20px 0;
+}
+.recently-played{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.item{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.item-img{
+    position: relative;
+}
+.overlay:hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Upgrade Bar */
@@ -130,10 +189,28 @@ main{
 
 /* Footer */
 footer{
-    display: fixed;
+    position: fixed;
     z-index: 10;
 
     width: 100%;
     height: 100px;
     background-color: #282828;
+}
+.player{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-player{
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.now-playing{
+    display: block;
+    height: 50px;
+    width: 50px;
 }
