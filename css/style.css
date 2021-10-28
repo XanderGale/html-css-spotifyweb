@@ -147,7 +147,8 @@ main{
     align-items: flex-start;
 }
 .item{
-    max-width: 250px;
+    max-width: calc(((100% - 2%) - 10%) / 6);
+    margin: 1%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
