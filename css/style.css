@@ -143,15 +143,14 @@ main{
 .recently-played{
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 .item{
-    max-width: calc(85vw / 6);
-    margin: 3%;
+    max-width: 250px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .item-img-wrap{
