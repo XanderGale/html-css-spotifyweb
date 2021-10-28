@@ -155,8 +155,6 @@ main{
     align-items: center;
 }
 .item-img-wrap{
-    max-width: calc(85vw / 6);
-    max-height: calc(85vh / 6);
     position: relative;
     cursor: pointer;
 }
