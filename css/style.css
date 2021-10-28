@@ -419,4 +419,13 @@ footer{
     .container-right{
         width: auto;
     }
+    .line::after{
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: transparent;
+    
+        margin: 6px 0;
+    }
 }
