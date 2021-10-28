@@ -251,7 +251,9 @@ footer{
 .now-playing{
     display: block;
     max-height: 75px;
+    min-height: 35px;
     max-width: 75px;
+    min-width: 35px;
     margin: 0 3%;
 }
 .now-playing-img{
@@ -305,7 +307,8 @@ footer{
     border: 5px;  
     cursor: pointer;  
     height: 4px;  
-    width: 80%;  
+    width: 70%;
+    min-width: 100px;  
 }
 .progress{
     position: absolute;
@@ -326,9 +329,12 @@ footer{
 .right-player-actions{
     width: 50%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+}
+.right-player-actions i{
+    margin: 7%;
 }
 
 .volume-container{  
