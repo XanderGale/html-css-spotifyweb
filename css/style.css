@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    white-space: nowrap;
 }
 
 /* Common */
@@ -199,6 +200,9 @@ footer{
     height: 100px;
     background-color: #282828;
 }
+
+
+/* Player */
 .player{
     height: 100%;
     display: flex;
@@ -206,8 +210,8 @@ footer{
     justify-content: space-between;
     align-items: center;
 }
-
 .left-player{
+    width: 15%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -215,9 +219,59 @@ footer{
 }
 .now-playing{
     display: block;
-    max-height: 50px;
-    max-width: 50px;
+    max-height: 75px;
+    max-width: 75px;
+    margin: 0 3%;
 }
 .now-playing-img{
     width: 100%;
 }
+.now-playing-desc{
+    flex-grow: 1;
+}
+.now-playing-actions i{
+    margin: 0 10%;
+}
+.center-player{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.player-actions{
+    width: 40%;
+    height: calc(100% / 2);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    color: white;
+}
+.down-player{
+    width: 100%;
+    height: calc(100% / 2);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.progress-container{  
+    position: relative;
+    background-color: #686a6f;  
+    border: 5px;  
+    cursor: pointer;  
+    height: 4px;  
+    width: 80%;  
+}
+.progress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;  
+    border-radius: 5px;  
+    height: 100%;  
+    width: 20%; 
+}  
