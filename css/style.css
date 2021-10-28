@@ -55,6 +55,14 @@ main{
 
     background-color: black;
 }
+.nav-left img:hover{
+    cursor: pointer;
+}
+.nav-left i:hover,
+.nav-header img:hover{
+    cursor: pointer;
+    border-left: 3px solid limegreen;
+}
 .nav-left .logo{
     height: 40px;
 }
