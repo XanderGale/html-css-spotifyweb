@@ -137,8 +137,13 @@ main{
 }
 .nav-content ul li{
     display: inline-block;
+    padding: 3px 0;
+    border-bottom: 3px solid transparent;
 
     margin: 0 10px;
+}
+.nav-content ul li:hover{
+    border-bottom: 3px solid limegreen;
 }
 .nav-content ul li a{
     color: #686a6f;
