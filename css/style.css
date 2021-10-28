@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    white-space: nowrap;
 }
 
 /* Common */
@@ -46,7 +45,8 @@ main{
 .nav-left{
     width: 15%;
     height: calc(100vh - 100px);
-    padding: 25px;
+    padding: 1%;
+    z-index: 9;
 
     display: flex;
     flex-flow: column nowrap;
@@ -68,6 +68,7 @@ main{
     width: 100%;
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 .nav-footer{
     width: 100%;
@@ -133,7 +134,7 @@ main{
 
 /* Content Container */
 .content-container{
-    padding: 20px;
+    padding: 3%;
 }
 .content-container h2,
 .content-container h3{
@@ -146,31 +147,54 @@ main{
     align-items: center;
 }
 .item{
+    max-width: calc(85vw / 6);
+    margin: 3%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 }
-.item-img{
+.item-img-wrap{
+    max-width: calc(85vw / 6);
+    max-height: calc(85vh / 6);
     position: relative;
+    cursor: pointer;
 }
-.overlay:hover {
+.item-img-wrap:hover .overlay{
+    visibility: visible;
+}
+.item-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: center;
+}
+.overlay {
     position: absolute;
+    visibility: hidden;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 80px;
+    color: white;
 }
 
 /* Upgrade Bar */
 .upgrade-bar{
-    position: absolute;
+    position: fixed;
+    z-index: 8;
     top: 0;
     right: 0;
 
     width: 100%;
-    height: 100px;
+    height: 80px;
 
     background-color: rgba(0, 0, 0, 0.5);
 
@@ -229,8 +253,14 @@ footer{
 .now-playing-desc{
     flex-grow: 1;
 }
+.now-playing-actions{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
 .now-playing-actions i{
-    margin: 0 10%;
+    margin: 0 25%;
 }
 .center-player{
     width: 50%;
@@ -274,4 +304,37 @@ footer{
     border-radius: 5px;  
     height: 100%;  
     width: 20%; 
-}  
+}
+.right-player{
+    width: 15%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.right-player-actions{
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.volume-container{  
+    position: relative;
+    background-color: #686a6f;  
+    border: 5px;  
+    cursor: pointer;  
+    height: 4px;  
+    width: 50%;
+    margin: 0 3%;
+}
+.volume{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;  
+    border-radius: 5px;  
+    height: 100%;  
+    width: 20%; 
+}
