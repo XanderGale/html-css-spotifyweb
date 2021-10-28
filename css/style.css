@@ -259,6 +259,9 @@ footer{
     min-width: 35px;
     margin: 0 3%;
 }
+.now-playing-desc{
+    margin-left: 3%;
+}
 .now-playing-img{
     width: 100%;
 }
